@@ -12,7 +12,7 @@ npm install @tracestax/node
 pnpm add @tracestax/node
 ```
 
-## Quickstart — BullMQ
+## Quickstart - BullMQ
 
 ```typescript
 import { Queue, Worker } from "bullmq";
@@ -24,9 +24,9 @@ const worker = new Worker("tasks", processor, { connection });
 const monitor = configure(queue, { apiKey: "ts_live_xxx" }, worker);
 ```
 
-BullMQ is a peer dependency — you must have `bullmq >= 5.0.0` installed.
+BullMQ is a peer dependency - you must have `bullmq >= 5.0.0` installed.
 
-## Quickstart — Bull
+## Quickstart - Bull
 
 ```typescript
 import Bull from "bull";
@@ -36,7 +36,7 @@ const queue = new Bull("tasks", { redis: { host: "localhost", port: 6379 } });
 configureBull(queue, { apiKey: "ts_live_xxx" });
 ```
 
-## Quickstart — AWS SQS
+## Quickstart - AWS SQS
 
 ```typescript
 import { SQSClient } from "@aws-sdk/client-sqs";
@@ -46,7 +46,7 @@ const sqs = new SQSClient({ region: "us-east-1" });
 const monitor = configureSqs(sqs, { apiKey: "ts_live_xxx", queueUrl: "https://sqs..." });
 ```
 
-## Quickstart — Temporal
+## Quickstart - Temporal
 
 ```typescript
 import { Worker } from "@temporalio/worker";
@@ -58,7 +58,7 @@ const worker = await Worker.create({
 });
 ```
 
-## Quickstart — AWS Lambda / Google Cloud Functions
+## Quickstart - AWS Lambda / Google Cloud Functions
 
 Wrap your handler with zero code changes:
 
