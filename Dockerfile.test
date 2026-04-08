@@ -1,0 +1,14 @@
+FROM node:22.22.2-alpine3.22
+
+WORKDIR /sdk
+
+COPY package.json ./
+# Inline a self-contained tsconfig that doesn't extend the monorepo root
+RUN echo '{"compilerOptions":{"target":"ES2022","module":"NodeNext","moduleResolution":"NodeNext","strict":true,"outDir":"./dist","rootDir":"./src"},"include":["src","tests"]}' > tsconfig.json
+
+COPY src/ src/
+COPY tests/ tests/
+
+RUN npm install --include=dev
+
+CMD ["npm", "test"]

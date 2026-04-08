@@ -1,0 +1,79 @@
+{
+  "name": "@tracestax/node",
+  "version": "0.1.0",
+  "description": "TraceStax SDK for Node.js background job frameworks — BullMQ, Bull, SQS, Temporal",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./lambda": {
+      "types": "./dist/lambda.d.ts",
+      "import": "./dist/lambda.js"
+    },
+    "./sqs": {
+      "types": "./dist/sqs.d.ts",
+      "import": "./dist/sqs.js"
+    },
+    "./temporal": {
+      "types": "./dist/temporal.d.ts",
+      "import": "./dist/temporal.js"
+    },
+    "./bull": {
+      "types": "./dist/bull.d.ts",
+      "import": "./dist/bull.js"
+    },
+    "./cloud-functions": {
+      "types": "./dist/cloud-functions.d.ts",
+      "import": "./dist/cloud-functions.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "bullmq",
+    "bull",
+    "sqs",
+    "temporal",
+    "monitoring",
+    "observability",
+    "task-queue",
+    "worker"
+  ],
+  "author": "TraceStax <eng@tracestax.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@temporalio/worker": ">=1.0.0",
+    "bull": ">=3.0.0",
+    "bullmq": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "bullmq": {
+      "optional": true
+    },
+    "bull": {
+      "optional": true
+    },
+    "@temporalio/worker": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "bullmq": "^5.73.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
