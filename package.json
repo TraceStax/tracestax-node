@@ -1,7 +1,7 @@
 {
   "name": "@tracestax/node",
   "version": "0.1.0",
-  "description": "TraceStax SDK for Node.js background job frameworks — BullMQ, Bull, SQS, Temporal",
+  "description": "TraceStax SDK for Node.js background job frameworks - BullMQ, Bull, SQS, Temporal",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
