@@ -16,7 +16,7 @@
  *  - Two concurrent flush() calls do not double-send events
  */
 
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { TraceStaxClient } from "../src/client.js";
 
 // Stub process.on so exit hooks don't fire during tests
