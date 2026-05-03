@@ -1,6 +1,6 @@
 {
   "name": "@tracestax/node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TraceStax SDK for Node.js background job frameworks - BullMQ, Bull, SQS, Temporal",
   "type": "module",
   "main": "dist/index.js",
@@ -72,7 +72,7 @@
     }
   },
   "devDependencies": {
-    "bullmq": "^5.75.2",
+    "bullmq": "^5.76.5",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   }
